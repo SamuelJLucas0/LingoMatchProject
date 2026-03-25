@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inglespvp/pages/login_page.dart';
+import 'package:inglespvp/pages/login_page2.dart';
 import 'package:inglespvp/pages/pantalla_principal.dart';
 import 'package:inglespvp/pages/ranking_page.dart';
 import 'package:inglespvp/pages/register_page.dart';
@@ -17,16 +18,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'InglesPVP',
-      initialRoute: 'register',
+      initialRoute: '/',
       // theme: ThemeData(
       //   brightness: Brightness.dark,
       //   fontFamily: 'Verdana', 
       // ),
       routes: {
-        '/' : (BuildContext context) => login_page(),
+        '/' : (BuildContext context) => LoginPage2(),
         'register' : (BuildContext context) => RegisterPage(),
         'pantalla_principal' : (_) => MainMenu(),
         'pagina_rank' : (_) => RankingPage(),
+
       },
     );
   }
