@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:inglespvp/widgets/decoracion_titulo.dart';
 import 'package:inglespvp/widgets/input_decorado.dart';
 
+import 'package:provider/provider.dart';
+import '../models/player_model.dart';
+
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
 
@@ -10,7 +13,7 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
-  String categoria = '';
+  String categoria = 'A1';
   final formKey = GlobalKey<FormState>();
   final TextEditingController fechaController = TextEditingController();
   String nombre = '';
@@ -220,15 +223,20 @@ class _RegisterPageState extends State<RegisterPage> {
                   height: 55,
                   child: ElevatedButton(
                     onPressed: () {
-                      if(formKey.currentState!.validate()){
+                      if (formKey.currentState!.validate()) {
                         formKey.currentState!.save();
+
+                        final player = Provider.of<PlayerModel>(context, listen: false);
+                        player.setUserData(gamertag, categoria);
+
                         ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text('Guardado con exito'))
+                          const SnackBar(content: Text('Guardado con exito'))
                         );
+
                         Navigator.pushNamed(context, 'pantalla_principal');
-                      }else{
+                      } else {
                         ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text('Error al guardar'))
+                          const SnackBar(content: Text('Error al guardar'))
                         );
                       }
                     },
