@@ -13,7 +13,6 @@ class CustomNavigationBar extends StatelessWidget {
       height: 90,
       decoration: const BoxDecoration(
         color: Color(0xFF1B1B1B),
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
