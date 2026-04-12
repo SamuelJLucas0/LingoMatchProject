@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inglespvp/widgets/custom_navigation_bar.dart';
+import 'package:inglespvp/widgets/player_stats_bar.dart';
 import 'package:inglespvp/widgets/ranking_card.dart';
 
 class RankingPage extends StatelessWidget {
@@ -8,25 +9,12 @@ class RankingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("TOP PLAYERS"), 
-        backgroundColor: const Color(0xFF0D2444),
-        elevation: 0,
-      ),
       backgroundColor: const Color(0xFF1E3C72),
-      body: Stack(
+      body: Column(
         children: [
-          ListView(
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  RankingCard(),
-                ],
-              )
-            ],
-          )
-        ]
+          const player_stats_bar(),
+          
+        ],
       ),
       bottomNavigationBar: CustomNavigationBar(currentIndex: 1),
     );

@@ -5,8 +5,17 @@ import 'package:inglespvp/pages/pantalla_principal.dart';
 import 'package:inglespvp/pages/ranking_page.dart';
 import 'package:inglespvp/pages/register_page.dart';
 
+import 'package:provider/provider.dart';
+import 'package:inglespvp/models/player_model.dart';
+
+
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => PlayerModel(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
