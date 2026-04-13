@@ -77,28 +77,28 @@ class Login_buttons extends StatelessWidget {
         SizedBox(height: 30),
         AuthButton(
           text: 'Iniciar sesión con Google',
-          leadingIcon: Image.asset('assets/logo_white.png', height: 20, color: const Color(0xFF1A263F)), // Le puse color oscuro al logo para que se vea en el fondo claro
+          leadingIcon: Image.asset('assets/google.png', height: 20, ), // Le puse color oscuro al logo para que se vea en el fondo claro
           backgroundColor: const Color(0xFFD9E4F5),
           textColor: const Color(0xFF1A263F),
           onPressed: () => print('Google Login'),
         ),
         AuthButton(
           text: 'Iniciar sesión con Facebook', 
-          leadingIcon: Image.asset('assets/logo_white.png', height: 20, color: const Color(0xFF1A263F)), 
+          leadingIcon: Image.asset('assets/facebook.png', height: 20, width: 20, fit: BoxFit.contain,), 
           backgroundColor: const Color(0xFFD9E4F5), 
           textColor: const Color(0xFF1A263F), 
           onPressed: () => print('Facebook Login')
         ),
         AuthButton(
           text: 'Iniciar sesión con Email', 
-          leadingIcon: Image.asset('assets/logo_white.png', height: 20, color: const Color(0xFF1A263F)), 
+          leadingIcon: Icon(Icons.email, size: 20, color: const Color(0xFF1A263F)),
           backgroundColor: const Color(0xFFD9E4F5), 
           textColor: const Color(0xFF1A263F), 
           onPressed: () => print('Email Login')
         ),
         AuthButton(
           text: 'Iniciar sesión con Telefono', 
-          leadingIcon: Image.asset('assets/logo_white.png', height: 20, color: const Color(0xFF1A263F)), 
+          leadingIcon: Icon(Icons.phone, size: 20, color: const Color(0xFF1A263F)),
           backgroundColor: const Color(0xFFD9E4F5), 
           textColor: const Color(0xFF1A263F), 
           onPressed: () => print('Phone Login')
