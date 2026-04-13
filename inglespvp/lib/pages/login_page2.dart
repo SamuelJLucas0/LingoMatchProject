@@ -78,15 +78,15 @@ class Login_buttons extends StatelessWidget {
         AuthButton(
           text: 'Iniciar sesión con Google',
           leadingIcon: Image.asset('assets/google.png', height: 20, ), // Le puse color oscuro al logo para que se vea en el fondo claro
-          backgroundColor: const Color(0xFFD9E4F5),
-          textColor: const Color(0xFF1A263F),
+          backgroundColor: const Color.fromARGB(255, 12, 15, 19),
+          textColor: const Color.fromARGB(255, 255, 255, 255),
           onPressed: () => print('Google Login'),
         ),
         AuthButton(
           text: 'Iniciar sesión con Facebook', 
           leadingIcon: Image.asset('assets/facebook.png', height: 20, width: 20, fit: BoxFit.contain,), 
-          backgroundColor: const Color(0xFFD9E4F5), 
-          textColor: const Color(0xFF1A263F), 
+          backgroundColor: const Color.fromARGB(255, 32, 40, 127), 
+          textColor: const Color(0xFFD9E4F5), 
           onPressed: () => print('Facebook Login')
         ),
         AuthButton(
