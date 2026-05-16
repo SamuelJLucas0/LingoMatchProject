@@ -24,6 +24,7 @@ class LoginPage2 extends StatelessWidget {
               Text('¡Únete a la Experiencia Lingo!', style: TextStyle(
                 fontSize: 24, 
                 fontWeight: FontWeight.bold, 
+                fontFamily: 'poppins',
                 color: Colors.white
                 ), 
                 textAlign: TextAlign.center,
@@ -32,6 +33,7 @@ class LoginPage2 extends StatelessWidget {
               SizedBox(height:20),
               Text('No compartiremos nada sin tu permiso', style: TextStyle(
                 fontSize: 14, 
+                fontFamily: 'poppins',
                 color: Colors.white70
                 ), 
                 textAlign: TextAlign.center,
@@ -132,6 +134,7 @@ class TextoPoliticaPrivacidad extends StatelessWidget {
                 color: Colors.white,
                 decoration: TextDecoration.underline,
                 fontWeight: FontWeight.bold,
+                fontFamily: 'poppins',
               ),
               recognizer: TapGestureRecognizer()
                 ..onTap = () {
@@ -146,6 +149,7 @@ class TextoPoliticaPrivacidad extends StatelessWidget {
                 color: Colors.white,
                 decoration: TextDecoration.underline,
                 fontWeight: FontWeight.bold,
+                fontFamily: 'poppins',
               ),
               recognizer: TapGestureRecognizer()
                 ..onTap = () {
