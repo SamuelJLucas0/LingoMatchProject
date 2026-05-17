@@ -27,11 +27,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'InglesPVP',
-      initialRoute: '/',
-      // theme: ThemeData(
-      //   brightness: Brightness.dark,
-      //   fontFamily: 'Verdana', 
-      // ),
+      initialRoute: 'pagina_rank',
+      theme: ThemeData(
+        fontFamily: 'Poppins',
+      ),
       routes: {
         '/' : (BuildContext context) => LoginPage2(),
         'register' : (BuildContext context) => RegisterPage(),
